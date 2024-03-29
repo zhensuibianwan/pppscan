@@ -33,6 +33,7 @@ go+wails 编写的漏洞、指纹管理扫描工具
 ![](https://yuexiaduzhuo.oss-cn-nanjing.aliyuncs.com/pppscan/202403291133172.png)
 
 添加值是为了适应多样化的poc编写的，目前内置了4个。
+
 ![](https://yuexiaduzhuo.oss-cn-nanjing.aliyuncs.com/pppscan/202403291138186.png)
 
 request.url.0 ：poc扫描时会自动替换该值为扫描的url

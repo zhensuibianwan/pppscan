@@ -30,6 +30,7 @@ go+wails 编写的漏洞、指纹管理扫描工具
 
 这里特别说明一下状态码，如果状态码为空（即什么都不填）且为多个请求包的poc，则即使当前请求包通过判断值判断该漏洞不存在，程序也会自动发送下一个请求包，并判断漏洞是否存在。所以可以通过不填状态码，编写平行请求的poc，但是判断值一定要准确，否则容易误报。比如若依弱口令，一般存在两个默认口令，admin/admin123、ry/admin123。这是你就可以这样写，如下图：
 ![](https://yuexiaduzhuo.oss-cn-nanjing.aliyuncs.com/pppscan/202403291133036.png)
+
 ![](https://yuexiaduzhuo.oss-cn-nanjing.aliyuncs.com/pppscan/202403291133172.png)
 
 添加值是为了适应多样化的poc编写的，目前内置了4个。

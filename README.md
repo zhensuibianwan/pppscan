@@ -17,6 +17,7 @@ go+wails 编写的漏洞、指纹管理扫描工具
 
 扫描设置推荐
 扫描线程200、扫描超时5-6s
+
 ![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/08bcb1c7-62ea-43bd-b154-10fcf4400a4f)
 
 

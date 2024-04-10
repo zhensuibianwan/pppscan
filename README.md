@@ -104,6 +104,46 @@ request1.header.1 ：用法和request1.body.1差不多，区别就是右边填�
 和poc管理差不多，唯一注意的是，指纹中的faviconHash为32位的
 ![](https://yuexiaduzhuo.oss-cn-nanjing.aliyuncs.com/pppscan/202403291345300.png)
 
+### POC编写举例
+以任意文件上传POC 为例
+
+1、首页按需填写。建议先录上对应指纹，在编写POC
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/0b359131-dcb2-4488-b756-9ec65020bad9)
+
+2、选择请求次数。文件上传设成2，上传请求一次，访问上传文件一次
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/b0ca2725-9e49-48d8-98fa-713c8a5de9c6)
+
+3、填写第一次请求。将漏洞复现的bp数据包直接粘贴，填写漏洞存在时的状态码以及判断值，输出值那建议填写漏洞可能存在，若果上传成功，但是文件无法访问到，扫描结果就会返回漏洞可能存在。
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/1baeba45-1dfe-4456-8c0b-1e14a8b2a25b)
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/d405980d-54d1-43ac-8d20-6b7a949d79f8)
+
+4、如果访问的上传文件名是第一次请求的返回数据，这时编写第二次请求就需要用到添加值了。
+
+首先点击操作栏的设置
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/4e258eaf-9b8d-4689-a775-b5c31d90dede)
+
+点击新增选择添加第一个请求包的body，即request1.body.1
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/549091c7-ce50-4753-86fb-c09ef8aedb3a)
+
+随后将第一个请求包返回文件名的连同前后关键字一起复制，这里需要复制的是  "path":"VIDEO/240411004058172128.jsp"
+
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/39fac715-272a-458e-b6bb-759708273d5a)
+
+最后选中文件名点击替换即可
+
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/b26df5a2-3985-4145-8e47-8d8b29cd661d)
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/11345576-3f7d-444a-af90-7171660583f0)
+
+5、编写第二次请求。同理粘贴一个访问上传文件的数据包，随后删除文件名，再添加值那选择上面我们设置好的request1.body.1，最后点击插入即可
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/8fb95cdb-c9bb-4174-b927-b12c1e944c24)
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/b5108523-8cd1-443d-a7f2-6c9b8e131448)
+
+6、最后填写状态码，判断值，判断值这填写上传文件的内容，而输出值这可以这样填写  漏洞存在！文件上传后的地址为：~request.url.0~/publishingImg/VIDEO/~request1.body.1~
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/acdc1b55-0ba2-45b6-bd2a-fce2189bc1ed)
+
+7、 验证POC
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/4736d96b-748a-4dac-b0c3-888791931057)
+
 
 ## 结尾
 

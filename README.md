@@ -6,6 +6,29 @@ go+wails 编写的漏洞、指纹管理扫描工具
 
 本工具截图所进行的演示均在本地环境或授权情况下进行，且本工具不包含任何权限级别的漏洞利用poc，仅作为企业或个人资产漏洞自查的安全建设工具。在使用本工具时，您应确保该行为符合当地的法律法规，并且已经取得了足够的授权，请勿对非授权目标进行访问。如您在使用本工具的过程中存在任何非法行为，您需自行承担相应后果，我们将不承担任何法律及连带责任。请勿将本项目技术或代码应用在恶意软件制作、软件著作权/知识产权盗取或不当牟利等非法用途中。
 
+## 页面和使用展示
+### POC管理
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/0d23922a-bca1-40ed-b1ec-e077f789b672)
+### 指纹管理
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/74082bff-ad07-4499-9d56-df19ece64cb0)
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/f24efe21-1672-452e-9261-82734bd1e5ed)
+
+### 漏洞扫描
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/bdefe283-9cef-4a94-bee5-b2e643d528b0)
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/120fb484-6454-41f1-a6ae-91273f526d27)
+### 漏洞利用
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/eb043f6f-8321-450c-a4dc-6c777f8ef1bd)
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/bb479dae-f118-4b0f-b9f3-57aa278f0036)
+### 多线程扫描
+双击URL可以使用默认浏览器打开
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/a526fed2-08b6-48d8-919e-a6608d454034)
+### 指纹识别
+可以联动poc
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/378c6564-4ac9-4f55-9507-f31f26dbfa22)
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/a4eb7c1e-303a-4d93-9743-fc7430898e6b)
+可以以csv格式导出结果
+![image](https://github.com/zhensuibianwan/pppscan/assets/105875607/195d5f64-2697-4096-b1b2-8ec89b0dca3e)
+
 ## 使用说明
 
 ### 初始化

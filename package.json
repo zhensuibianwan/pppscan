@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "csv-write-stream": "^2.0.0",
+    "json2csv": "^5.0.0"
+  }
+}
